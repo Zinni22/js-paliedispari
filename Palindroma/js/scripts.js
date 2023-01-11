@@ -17,25 +17,28 @@ function verificaPalindroma (parola){
     let parolaDivisaContrario = parolaDivisa.reverse();
     console.log('la parola invertita è', parolaDivisaContrario);
 
-    let parolaInvertita = parolaDivisa.join('');
+    let parolaInvertita = parolaDivisaContrario.join('');
     console.log('La parola unita al contrario è', parolaInvertita);
 
     // condizione di verifica
     if(parola == parolaInvertita){
-        alert('la parola è palindroma')
+        alert('La parola è palindroma');
+        return true;
     }
     else{
-        alert('la parola non è palindroma')
+        alert('La parola non è palindroma');
+        return false;
     }
 
 }
 
 // chiedo all'utente di inserire una parola
 const userWord = prompt('Inserisci una parola');
-console.log('La prola inserita è',userWord);
+console.log('La parola inserita è',userWord);
 
 // al posto della funzione inserisco la parola dell'utente
 const verifica = verificaPalindroma(userWord);
+console.log('verifica', verifica);
 
 
 
